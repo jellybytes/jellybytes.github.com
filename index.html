@@ -1,0 +1,37 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>Wow my new web pageee</h2>
+    </body>
+
+    <p id="demo">Heyho</p>
+    <button type="button" onclick="myFunc()">click</button>
+    <p id="demo1">die das</p>
+    <button type="button" onclick="myLi()">click</button>
+
+    <script>
+        const person = {
+            firstName : "John",
+            lastName : "Doe",
+            fullName : function() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+        };
+        let addNums = (a,b) => a +b;
+
+        function myFunc() {
+            document.getElementById("demo").innerHTML = addNums(3,4);
+        }
+
+        function myLi() {
+            let dir = ["north", "south", "west","east"];
+            let html = `<h2>my list</h2><ul>`;
+            for (let y = 0; y < dir.length -1; y++) {
+                html += `<li>${dir[y]}</li>`;
+            }
+            html += `</ul>`;
+            document.getElementById("demo1").innerHTML = html;
+        }
+    </script>
+</html>
